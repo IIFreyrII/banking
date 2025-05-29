@@ -22,11 +22,11 @@ class _DetailPagaState extends State<DetailPaga> {
         decoration: const BoxDecoration(
           gradient: RadialGradient(
             colors: [
+              Color(0xff3C382D),
+              Colors.black,
               Colors.black,
               Colors.red,
-              Colors.orange,
-              Colors.grey,
-              Colors.red,
+              Colors.orangeAccent,
               Color(0xffECD670),
               Color(0xffECD670),
             ],
