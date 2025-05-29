@@ -14,7 +14,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: RadialGradient(
             colors: [
               Color(0xff3C382D),
@@ -30,7 +30,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +42,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage(
                               'assets/menuss.png',
                             ),
@@ -51,7 +51,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           color: Colors.black,
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Home',
                         style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
@@ -63,7 +63,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                           decoration: BoxDecoration(
                               border: Border.all(),
                               borderRadius: BorderRadius.circular(50)),
-                          child: Center(
+                          child: const Center(
                             child: Badge(
                               child: Image(
                                 height: 20,
@@ -76,15 +76,15 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
-                  Text(
+                  const Text(
                     'Your Current Balance',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text(
+                  const Text(
                     '\$1847,56',
                     style: TextStyle(
                       color: Colors.white,
@@ -92,7 +92,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   SingleChildScrollView(
@@ -115,7 +115,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                 height: 250,
                                 width: 200,
                                 decoration: BoxDecoration(
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(blurRadius: 2, color: Colors.black)
                                   ],
                                   border: Border.all(
@@ -181,7 +181,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         Stack(
@@ -200,7 +200,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                                 height: 250,
                                 width: 200,
                                 decoration: BoxDecoration(
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(blurRadius: 2, color: Colors.black)
                                   ],
                                   border: Border.all(
@@ -267,13 +267,13 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   const Padding(
@@ -296,16 +296,16 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  Text('Google Curses',style: TextStyle(
+                  const SizedBox(height: 20,),
+                  const Text('Google Curses',style: TextStyle(
                       fontSize: 35,
                     color: Colors.white,
                     fontFamily: (''),
                       ),),
-                  SizedBox(height: 10,),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 18.0),
-                    child: const Row(
+                  const SizedBox(height: 10,),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 18.0),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                        Text('App Design Basics',style: TextStyle(
@@ -322,14 +322,14 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       ],
                     ),
                   ),
-                  Divider(),
-                  SizedBox(height: 10,),
+                  const Divider(),
+                  const SizedBox(height: 10,),
                   const Text('Microsoft',style: TextStyle(
                     fontSize: 35,
                     color: Colors.black,
                     fontFamily: (''),///thankyou
                   ),),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   const Padding(
                     padding: EdgeInsets.only(right: 18.0),
                     child: Row(
@@ -349,8 +349,8 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                       ],
                     ),
                   ),
-                  Divider(),
-                  SizedBox(height: 10,),
+                  const Divider(),
+                  const SizedBox(height: 10,),
                 ],
               ),
             ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
-
 import 'chart.dart';
 
 class DetailPaga extends StatefulWidget {
@@ -23,11 +22,11 @@ class _DetailPagaState extends State<DetailPaga> {
         decoration: const BoxDecoration(
           gradient: RadialGradient(
             colors: [
-              Color(0xff3C382D),
-              Colors.black,
               Colors.black,
               Colors.red,
-              Colors.orangeAccent,
+              Colors.orange,
+              Colors.grey,
+              Colors.red,
               Color(0xffECD670),
               Color(0xffECD670),
             ],
@@ -50,12 +49,12 @@ class _DetailPagaState extends State<DetailPaga> {
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.black,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_new_sharp,
                         color: Colors.white,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Detail',
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
@@ -67,7 +66,7 @@ class _DetailPagaState extends State<DetailPaga> {
                         decoration: BoxDecoration(
                             border: Border.all(),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Icon(
                             Icons.credit_card,
                           ),
@@ -76,18 +75,18 @@ class _DetailPagaState extends State<DetailPaga> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Text(
+                const Text(
                   'Your Current Balance',
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                      color: Colors.black, fontWeight: FontWeight.bold),
                 ),
-                Text(
+                const Text(
                   '\$1847,56',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 60,
                     fontWeight: FontWeight.bold,
                   ),
@@ -105,17 +104,17 @@ class _DetailPagaState extends State<DetailPaga> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
+                  child: SizedBox(
                     height: 200,
                     width: 300,
                     child: SfSparkLineChart(
-                      color: Colors.yellow,
-                      data: <double>[
+                      color: Colors.lightBlue,
+                      data: const <double>[
                         4,
                         1,
                         30,
@@ -138,7 +137,7 @@ class _DetailPagaState extends State<DetailPaga> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
@@ -152,7 +151,7 @@ class _DetailPagaState extends State<DetailPaga> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'D',
                             style: TextStyle(color: Colors.white),
@@ -165,7 +164,7 @@ class _DetailPagaState extends State<DetailPaga> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'M',
                             style: TextStyle(color: Colors.white),
@@ -179,7 +178,7 @@ class _DetailPagaState extends State<DetailPaga> {
                             color: Colors.white,
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             '6M',
                             style: TextStyle(color: Colors.black),
@@ -192,7 +191,7 @@ class _DetailPagaState extends State<DetailPaga> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Y',
                             style: TextStyle(
@@ -207,7 +206,7 @@ class _DetailPagaState extends State<DetailPaga> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(50)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'ALL',
                             style: TextStyle(color: Colors.white),
@@ -217,14 +216,14 @@ class _DetailPagaState extends State<DetailPaga> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 const Row(
                   children: [
                     Expanded(
                       child: Text(
-                        'You have receve a \namong of moneny of from',
+                        'You have received a debt of \nfrom this service',
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: (''),
@@ -242,42 +241,42 @@ class _DetailPagaState extends State<DetailPaga> {
                           'PayPal',
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.green,
+                            color: Colors.yellowAccent,
                           ),
                         ),
                       ],
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
                   child: SwipeableButtonView(
                     onFinish: () {},
                     onWaitingProcess: () {
-                      Future.delayed(Duration(seconds: 2), () {
+                      Future.delayed(const Duration(seconds: 2), () {
                         setState(() {
                           isFinished:
                           true;
                         });
                       });
                     },
-                    activeColor: Color(0xffF2E6CC),
+                    activeColor: const Color(0xffF2E6CC),
                     buttonWidget: Container(
                       height: 60,
                       width: 60,
                       decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Colors.blue, ///button color
                         borderRadius: BorderRadius.circular(50)
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.navigate_next_outlined,size: 30,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                     ),
-                    buttonText: 'Conform Payment Now',
-                    buttontextstyle: TextStyle(
-                      color: Colors.black,///thankyou
+                    buttonText: 'Confirm Payment Now',
+                    buttontextstyle: const TextStyle(
+                      color: Colors.white,///thank you
                     ),
                   ),
                 ),

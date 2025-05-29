@@ -21,10 +21,10 @@ class _ChartState extends State<Chart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: SfSparkLineChart(
-          color: Colors.yellow,
-          data: <double>[
+          color: Colors.blue,
+          data: const <double>[
             1, 5, -6, 0, 1, -2, 7, -7, -4, -10, 13, -6, 7, 5, 11, 5, 3
           ],
         )
